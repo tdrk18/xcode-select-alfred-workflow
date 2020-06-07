@@ -7,6 +7,10 @@ import (
 func createApp() *cli.App {
 	app := &cli.App{
 		Action: func(c *cli.Context) error {
+			for _, repo := range filterXcodeApp(execMDFind()) {
+				addItem(repo)
+			}
+			sendFeedback()
 			return nil
 		},
 	}
