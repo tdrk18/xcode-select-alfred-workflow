@@ -2,6 +2,7 @@ package main
 
 import (
 	"os/exec"
+	"regexp"
 	"strings"
 )
 
@@ -22,4 +23,14 @@ func filterXcodeApp(list []string) []string {
 		}
 	}
 	return values
+}
+
+func getAppName(path string) string {
+	r := regexp.MustCompile(`[xX]code.*\.app`)
+	for _, name := range strings.Split(path, "/") {
+		if r.MatchString(name) {
+			return name
+		}
+	}
+	return ""
 }
