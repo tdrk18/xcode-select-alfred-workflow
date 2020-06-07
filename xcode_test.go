@@ -36,3 +36,10 @@ func TestGetAppName(t *testing.T) {
 		t.Fatal(fmt.Sprintf("failed: getAppName() returns %s", result4))
 	}
 }
+
+func TestGetAppContentPath(t *testing.T) {
+	result := getAppContentPath("/Applications/Xcode11.5.app")
+	if result != "/Applications/Xcode11.5.app/Contents/Developer" {
+		t.Fatal(fmt.Sprintf("failed: getAppContentPath() returns %s", result))
+	}
+}

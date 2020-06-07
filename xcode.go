@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os/exec"
 	"regexp"
 	"strings"
@@ -33,4 +34,9 @@ func getAppName(path string) string {
 		}
 	}
 	return ""
+}
+
+func getAppContentPath(path string) string {
+	path = strings.TrimRight(path, "/")
+	return fmt.Sprintf("%s/Contents/Developer", path)
 }
