@@ -1,7 +1,7 @@
 package main
 
-func addItem(app string) {
-	wf.NewItem(app).
+func addItem(path string) {
+	wf.NewItem(getAppName(path)).
 		Valid(true)
 }
 
