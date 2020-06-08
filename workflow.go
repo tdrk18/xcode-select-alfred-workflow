@@ -15,6 +15,10 @@ func getIcon(path string) *aw.Icon {
 	return &aw.Icon{Value: getAppIconPath(path)}
 }
 
+func filter(query string) {
+	wf.Filter(query)
+}
+
 func sendFeedback() {
 	wf.SendFeedback()
 }
