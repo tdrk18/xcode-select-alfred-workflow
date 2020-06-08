@@ -11,6 +11,7 @@ func createApp() *cli.App {
 			for _, path := range filterXcodeApp(execMDFind()) {
 				addItem(path)
 			}
+			filter(getQuery(c.Args().First()))
 			sendFeedback()
 			return nil
 		},
