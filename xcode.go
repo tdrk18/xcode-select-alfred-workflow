@@ -40,3 +40,8 @@ func getAppContentPath(path string) string {
 	path = strings.TrimRight(path, "/")
 	return fmt.Sprintf("%s/Contents/Developer", path)
 }
+
+func getAppIconPath(path string) string {
+	path = strings.TrimRight(path, "/")
+	return fmt.Sprintf("%s/Contents/Resources/Xcode.icns", path)
+}

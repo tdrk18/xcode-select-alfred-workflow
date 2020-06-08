@@ -43,3 +43,10 @@ func TestGetAppContentPath(t *testing.T) {
 		t.Fatal(fmt.Sprintf("failed: getAppContentPath() returns %s", result))
 	}
 }
+
+func TestGetAppIconPath(t *testing.T) {
+	result := getAppIconPath("/Applications/Xcode11.5.app")
+	if result != "/Applications/Xcode11.5.app/Contents/Resources/Xcode.icns" {
+		t.Fatal(fmt.Sprintf("failed: getAppIconPath() returns %s", result))
+	}
+}
