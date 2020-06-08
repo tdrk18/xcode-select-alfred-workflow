@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/urfave/cli/v2"
+	"strings"
 )
 
 func createApp() *cli.App {
@@ -15,4 +16,8 @@ func createApp() *cli.App {
 		},
 	}
 	return app
+}
+
+func getQuery(arg string) string {
+	return strings.Trim(arg, "\n")
 }
