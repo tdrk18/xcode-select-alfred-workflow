@@ -116,6 +116,8 @@
 			<integer>190</integer>
 		</dict>
 	</dict>
+	<key>version</key>
+	<string>0.1.0</string>
 	<key>webaddress</key>
 	<string>https://twitter.com/tdrk18</string>
 </dict>
