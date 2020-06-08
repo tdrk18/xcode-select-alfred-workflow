@@ -7,6 +7,10 @@ import (
 func createApp() *cli.App {
 	app := &cli.App{
 		Action: func(c *cli.Context) error {
+			for _, path := range filterXcodeApp(execMDFind()) {
+				addItem(path)
+			}
+			sendFeedback()
 			return nil
 		},
 	}
