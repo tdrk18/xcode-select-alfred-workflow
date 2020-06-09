@@ -58,7 +58,7 @@
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string></string>
+				<string>Searching Xcodes...</string>
 				<key>script</key>
 				<string>./xcode-select-alfred-workflow {query}</string>
 				<key>scriptargtype</key>
@@ -98,7 +98,9 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>Select Xcode.app and execute `xcode-select -s` command with the selected one.
+
+Search Xcode.app in `/Applications`.</string>
 	<key>uidata</key>
 	<dict>
 		<key>3CC40CD9-B898-43E5-8F39-4507A79CF84A</key>
