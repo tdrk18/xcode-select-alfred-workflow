@@ -12,6 +12,7 @@ func createApp() *cli.App {
 				addItem(path)
 			}
 			filter(getQuery(c.Args().First()))
+			warnEmpty()
 			sendFeedback()
 			return nil
 		},

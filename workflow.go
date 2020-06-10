@@ -22,3 +22,7 @@ func filter(query string) {
 func sendFeedback() {
 	wf.SendFeedback()
 }
+
+func warnEmpty() {
+	wf.WarnEmpty("No matched app", "Please try new query")
+}
